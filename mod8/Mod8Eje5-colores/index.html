@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Colores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="color-display">
+            <h1 class="title">🎨 Generador de Colores</h1>
+            <p class="subtitle">Haz clic en el botón para generar un color aleatorio</p>
+            
+            <div class="color-code" id="colorCode">#667eea</div>
+            
+            <div class="button-group">
+                <button class="btn btn-generate" id="generateBtn">
+                    Generar Color
+                </button>
+                <button class="btn btn-copy" id="copyBtn">
+                    📋 Copiar Código
+                </button>
+            </div>
+            
+            <div class="color-info">
+                <div class="info-item">
+                    <span class="label">RGB:</span>
+                    <span id="rgbValue">rgb(102, 126, 234)</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">HSL:</span>
+                    <span id="hslValue">hsl(228, 76%, 66%)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h2>Últimos Colores</h2>
+            <div class="history-grid" id="historyGrid">
+                <!-- Los colores se agregarán aquí dinámicamente -->
+            </div>
+            <button class="btn btn-clear" id="clearHistory">
+                Limpiar Historial
+            </button>
+        </div>
+
+        <div class="instructions">
+            <h3>💡 Tip:</h3>
+            <p>También puedes presionar la <strong>barra espaciadora</strong> para generar un nuevo color</p>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">
+        ✓ Código copiado al portapapeles
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

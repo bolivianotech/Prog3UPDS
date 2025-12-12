@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj Digital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock-card">
+            <div class="greeting" id="greeting">Buenos días</div>
+            
+            <div class="time-display">
+                <div class="time" id="time">00:00:00</div>
+                <div class="period" id="period">AM</div>
+            </div>
+            
+            <div class="date" id="date">Lunes, 1 de Enero de 2024</div>
+            
+            <div class="controls">
+                <button class="btn" id="formatBtn">
+                    <span id="formatText">Cambiar a 24h</span>
+                </button>
+            </div>
+            
+            <div class="timezone-info">
+                <span class="label">Zona horaria:</span>
+                <span id="timezone">UTC-5</span>
+            </div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📅</div>
+                <div class="stat-value" id="dayOfYear">1</div>
+                <div class="stat-label">Día del año</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📆</div>
+                <div class="stat-value" id="weekNumber">1</div>
+                <div class="stat-label">Semana del año</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⏰</div>
+                <div class="stat-value" id="secondsToday">0</div>
+                <div class="stat-label">Segundos hoy</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

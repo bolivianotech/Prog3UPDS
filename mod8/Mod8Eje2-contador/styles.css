@@ -1,0 +1,283 @@
+/* =====================================
+   RESET Y VARIABLES
+   ===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colores */
+    --color-positive: #28a745;
+    --color-negative: #dc3545;
+    --color-neutral: #2d3748;
+    --color-bg-positive: #d4edda;
+    --color-bg-negative: #f8d7da;
+    --color-bg-neutral: #f8f9fa;
+    
+    /* Botones */
+    --btn-success: #28a745;
+    --btn-danger: #dc3545;
+    --btn-secondary: #6c757d;
+    
+    /* Espaciado */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Transiciones */
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-lg);
+}
+
+/* =====================================
+   CONTENEDOR PRINCIPAL
+   ===================================== */
+
+.container {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.titulo {
+    font-size: 2rem;
+    color: var(--color-neutral);
+    margin-bottom: var(--spacing-xl);
+    font-weight: 700;
+}
+
+/* =====================================
+   DISPLAY DEL CONTADOR
+   ===================================== */
+
+.contador-display {
+    background: var(--color-bg-neutral);
+    padding: var(--spacing-xl);
+    border-radius: 15px;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.numero {
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--color-neutral);
+    display: block;
+    transition: var(--transition);
+    position: relative;
+}
+
+/* Estados del número */
+.numero.positivo {
+    color: var(--color-positive);
+    animation: pulso 0.3s ease;
+}
+
+.numero.negativo {
+    color: var(--color-negative);
+    animation: pulso 0.3s ease;
+}
+
+.numero.neutro {
+    color: var(--color-neutral);
+}
+
+/* Animación de pulso */
+@keyframes pulso {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Cambio de fondo según estado */
+.contador-display.bg-positivo {
+    background: var(--color-bg-positive);
+}
+
+.contador-display.bg-negativo {
+    background: var(--color-bg-negative);
+}
+
+.contador-display.bg-neutro {
+    background: var(--color-bg-neutral);
+}
+
+/* =====================================
+   BOTONES
+   ===================================== */
+
+.botones {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn .icono {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-success {
+    background: var(--btn-success);
+}
+
+.btn-success:hover {
+    background: #218838;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.btn-danger {
+    background: var(--btn-danger);
+}
+
+.btn-danger:hover {
+    background: #c82333;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+}
+
+.btn-secondary {
+    background: var(--btn-secondary);
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Botones Bonus */
+.botones-bonus {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.btn-small {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-success-light {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.btn-success-light:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+}
+
+.btn-danger-light {
+    background: linear-gradient(135deg, #dc3545 0%, #fd7e14 100%);
+}
+
+.btn-danger-light:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
+}
+
+/* =====================================
+   INFORMACIÓN
+   ===================================== */
+
+.info {
+    padding: var(--spacing-md);
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.info p {
+    color: #495057;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.info strong {
+    color: #2d3748;
+    font-weight: 700;
+}
+
+/* =====================================
+   RESPONSIVE
+   ===================================== */
+
+@media (max-width: 600px) {
+    .container {
+        padding: var(--spacing-lg);
+    }
+    
+    .titulo {
+        font-size: 1.5rem;
+    }
+    
+    .numero {
+        font-size: 3.5rem;
+    }
+    
+    .botones {
+        flex-direction: column;
+    }
+    
+    .btn {
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contador interactivo con JavaScript - Ejercicio práctico">
+    <title>Contador Interactivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Título -->
+        <h1 class="titulo">Contador Interactivo</h1>
+        
+        <!-- Display del contador -->
+        <div class="contador-display">
+            <span id="contador" class="numero">0</span>
+        </div>
+        
+        <!-- Botones de control -->
+        <div class="botones">
+            <button id="btnDecrementar" class="btn btn-danger">
+                <span class="icono">-</span>
+                Decrementar
+            </button>
+            
+            <button id="btnResetear" class="btn btn-secondary">
+                <span class="icono">↻</span>
+                Resetear
+            </button>
+            
+            <button id="btnIncrementar" class="btn btn-success">
+                <span class="icono">+</span>
+                Incrementar
+            </button>
+        </div>
+        
+        <!-- Botones Bonus -->
+        <div class="botones-bonus">
+            <button id="btnDecrementar5" class="btn-small btn-danger-light">-5</button>
+            <button id="btnIncrementar5" class="btn-small btn-success-light">+5</button>
+        </div>
+        
+        <!-- Información -->
+        <div class="info">
+            <p id="mensaje">El contador está en <strong>cero</strong></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

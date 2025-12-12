@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div class="previous-operand"></div>
+            <div class="current-operand">0</div>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-clear span-2">AC</button>
+            <button class="btn btn-delete">DEL</button>
+            <button class="btn btn-operator">÷</button>
+            
+            <button class="btn btn-number">7</button>
+            <button class="btn btn-number">8</button>
+            <button class="btn btn-number">9</button>
+            <button class="btn btn-operator">×</button>
+            
+            <button class="btn btn-number">4</button>
+            <button class="btn btn-number">5</button>
+            <button class="btn btn-number">6</button>
+            <button class="btn btn-operator">-</button>
+            
+            <button class="btn btn-number">1</button>
+            <button class="btn btn-number">2</button>
+            <button class="btn btn-number">3</button>
+            <button class="btn btn-operator">+</button>
+            
+            <button class="btn btn-number span-2">0</button>
+            <button class="btn btn-number">.</button>
+            <button class="btn btn-equals">=</button>
+        </div>
+        <div class="history">
+            <h3>Historial</h3>
+            <div class="history-list"></div>
+            <button class="btn-clear-history">Limpiar Historial</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

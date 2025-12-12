@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Tema - Dark/Light Mode</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌓 Cambio de Tema</h1>
+            <button id="themeToggle" class="theme-toggle">
+                <span class="icon">🌙</span>
+            </button>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>Modo Oscuro / Claro</h2>
+                <p>Este es un ejemplo de cómo implementar un cambio de tema entre modo claro y oscuro usando JavaScript y CSS.</p>
+                
+                <div class="features">
+                    <div class="feature-item">
+                        <span class="emoji">💾</span>
+                        <h3>Persistencia</h3>
+                        <p>Tu preferencia se guarda en localStorage</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="emoji">🎨</span>
+                        <h3>Transiciones</h3>
+                        <p>Cambios suaves entre temas</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="emoji">⚡</span>
+                        <h3>Rápido</h3>
+                        <p>Cambio instantáneo con un clic</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Código de Ejemplo</h2>
+                <pre><code>// JavaScript para cambiar tema
+const toggleTheme = () => {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', 
+        document.body.classList.contains('dark-mode') 
+        ? 'dark' : 'light'
+    );
+};</code></pre>
+            </section>
+
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>100%</h3>
+                    <p>JavaScript Puro</p>
+                </div>
+                <div class="stat-card">
+                    <h3>CSS</h3>
+                    <p>Variables</p>
+                </div>
+                <div class="stat-card">
+                    <h3>🚀</h3>
+                    <p>Fácil de Implementar</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Presiona el botón en el header para cambiar el tema</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
